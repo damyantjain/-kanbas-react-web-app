@@ -47,21 +47,17 @@
       <!-- Right display -->
       <div class="mx-3 my-3" style="width: 100%">
         <div class="row">
-          <div class="d-flex justify-content-between">
-            <span
-              ><a
-                style="color: #ff7070; text-decoration: none"
-                href="/Kanbas/Courses/Home/screen.html"
-              >
-                CS 5610.58411.SEC 01
-              </a>
-              > Assignments</span
-            >
-            <a class="btn btn-secondary btn-sm" href="#" role="button">
-              <i class="fa fa-pencil" aria-hidden="true"></i>
-              Student View</a
-            >
-          </div>
+          <div class="d-flex justify-content-between wd-top">
+            <div class="d-flex">
+               <a href=""><i class="fa-solid fa-bars" style="margin-top: 3px; color: #ff7070" aria-hidden="true"></i></a>
+            <nav style="--bs-breadcrumb-divider: '>'; margin-left: 10px;" aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item wd-top-bar"><a href="/Kanbas/Courses/Home/screen.html">CS5610.11744.202310</a></li>
+                <li class="breadcrumb-item wd-top-bar" aria-current="page"><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
+                <li class="breadcrumb-item active wd-top-bar-text"><a href="/Kanbas/Courses/Assignments/Edit/screen.html">A1 - ENV + HTML</a></li>
+              </ol>
+            </nav>
+            </div>
         </div>
 
         <div class="row mt-3">
@@ -128,8 +124,8 @@ This assignment describes how to install the development environment for creatin
                 <div class="col-sm-6 col-md-8 w-50">
                   <input
                     class="form-control"
-                    type="text"
-                    placeholder="Assignment Name"
+                    type="number"
+                    placeholder="Points"
                     aria-label="default input example"
                     value="100"
                   />
@@ -140,7 +136,7 @@ This assignment describes how to install the development environment for creatin
                   Assignment Group
                 </div>
                 <div class="col-sm-6 col-md-8 w-50">
-                  <select class="form-control">
+                  <select class="form-control form-select">
                     <option>ASSIGNMENTS</option>
                   </select>
                 </div>
@@ -159,9 +155,9 @@ This assignment describes how to install the development environment for creatin
               </div>
               <div class="row g-0 text-end" style="padding-bottom: 15px">
                 <div class="col-6 col-md-4" style="padding-top: 5px; padding-right: 15px">
-                  <input type="checkbox" />
                 </div>
                 <div class="col-sm-6 col-md-8" style="text-align: start">
+                  <input type="checkbox" />
                   Do not count this assignment towards the final grade
                 </div>
               </div>
@@ -247,9 +243,13 @@ This assignment describes how to install the development environment for creatin
                   Notify users that this content has changed
                 </span>
                 <span style="margin-left: 650px">
-                  <button class="btn" style="margin-right: 5px">Cancel</button>
+                  <a href="/Kanbas/Courses/Assignments/screen.html">
+                  <button class="btn" style="margin-right: 5px" href="">Cancel</button>
+                  </a>
 
+                  <a href="/Kanbas/Courses/Assignments/screen.html">
                   <button class="btn btn-danger" style="height: fit-content">Save</button>
+                  </a>
                 </span>
               </div>
 

@@ -26,3 +26,14 @@
    display: inline;
    align-items: center;
 }
+
+.wd-top-bar > a {
+    text-decoration: none;
+    width: 100%;
+    color: #ff7070;
+  }
+
+  .wd-top-bar-text > a{
+    text-decoration: none;
+    color: black;
+  }
