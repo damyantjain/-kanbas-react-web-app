@@ -1,25 +1,54 @@
 <html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="/Kanbas/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/Kanbas/Navigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+    <script src="https://kit.fontawesome.com/a9e2ef2795.js" crossorigin="anonymous"></script>
+  </head>
   <body>
-    <table cellpadding="20">
+    <table>
       <tbody>
         <tr>
           <td valign="top">
-            <ul>
+            <ul class="wd-kanbas-navigation">
+              <li><a href="http://northeastern.edu">N</a></li>
               <li>
-                <a href="/Kanbas/Account/Profile/screen.html">Account</a>
+                <a href="/Kanbas/Account/Profile/screen.html"
+                  ><i class="fa fa-user-fa fa-user-circle wd-account"></i> Account</a
+                >
               </li>
-              <li><a href="#">Dashboard</a></li>
-              <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-              <li><a href="#">Calendar</a></li>
-              <li><a href="#">Inbox</a></li>
-              <li><a href="#">History</a></li>
-              <li><a href="#">Studio</a></li>
-              <li><a href="#">Commons</a></li>
-              <li><a href="#">Help</a></li>
+              <li>
+                <a href="/Kanbas/Dashboard/screen.html">
+                  <i class="fa fa-tachometer"></i> Dashboard</a
+                >
+              </li>
+              <li class="wd-active">
+                <a href="/Kanbas/Courses/Home/screen.html"
+                  ><i class="fa-solid fa-book"></i> Courses</a
+                >
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-calendar"></i> Calendar</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-envelope-open-text"></i> Inbox</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-regular fa-clock"></i> History</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-desktop"></i> Studio</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-right-from-bracket"></i> Commons</a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-solid fa-circle-question"></i> <br />Help</a>
+              </li>
             </ul>
           </td>
           <td valign="top">
-            <ul>
+            <ul class="wd-navigation">
               <li><a href="/Kanbas/Courses/Home/screen.html"> Home</a></li>
               <li><a href="#"> Modules</a></li>
               <li><a href="#"> Piazza</a></li>
@@ -39,21 +68,39 @@
               <li><a href="#"> Outcomes</a></li>
               <li><a href="#"> Collaboration</a></li>
               <li><a href="#"> Syllabus</a></li>
-              <li><a href="/Kanbas/Courses/Settings/CourseDetails/screen.html"> Settings</a></li>
+              <li class="wd-active">
+                <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html"> Settings</a>
+              </li>
             </ul>
           </td>
           <td valign="top">
-            <table cellpadding="5">
+            <table>
               <tr>
                 <td>
-                 <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html"><Button>Course Details</Button></a>
+                  <a href="/Kanbas/Courses/Settings/CourseDetails/screen.html"
+                    ><button>Course Details</button></a
+                  >
                 </td>
-                <td><a href="#"><Button>Sections</Button></a></td>
-                <td><a href="/Kanbas/Courses/Settings/Navigation/screen.html"><Button>Navigation</Button></a></td>
-                <td><a href="#"><Button>Apps</Button></a></td>
-                <td><a href="#"><Button>Feature</Button></a></td>
-                <td><a href="#"><Button>Options</Button></a></td>
-                <td><a href="#"><Button>Integrations</Button></a></td>
+                <td>
+                  <a href="#"><button>Sections</button></a>
+                </td>
+                <td>
+                  <a href="/Kanbas/Courses/Settings/Navigation/screen.html"
+                    ><button>Navigation</button></a
+                  >
+                </td>
+                <td>
+                  <a href="#"><button>Apps</button></a>
+                </td>
+                <td>
+                  <a href="#"><button>Feature</button></a>
+                </td>
+                <td>
+                  <a href="#"><button>Options</button></a>
+                </td>
+                <td>
+                  <a href="#"><button>Integrations</button></a>
+                </td>
               </tr>
             </table>
             <hr />
