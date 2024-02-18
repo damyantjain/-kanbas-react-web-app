@@ -1,0 +1,29 @@
+[
+  {
+    "_id": "RS101",
+    "name": "CS5800 Algorithms",
+    "number": "RS4550",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "description": "CS5800.Algorithm.Spring.2023.Online.Full.Term",
+    "image": "algorithm.png"
+  },
+  {
+    "_id": "RS102",
+    "name": "CS5610 Web Development",
+    "number": "RS4560",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "description": "CS5610.Spring.2023.Online.Full.Term",
+    "image": "webdev.jpg"
+  },
+  {
+    "_id": "RS103",
+    "name": "CS5010 Program Design Paradigm",
+    "number": "RS4570",
+    "startDate": "2023-01-10",
+    "endDate": "2023-05-15",
+    "description": "CS5010.Spring.2023.Full.Term.Program.Design.Paradigm",
+    "image": "pdp.png"
+  }
+]
