@@ -55,7 +55,7 @@ function Assignments() {
           </li>
           <ul className="list-group" style={{ borderRadius: "0%" }}>
             {assignmentList.map((assignment) => (
-              <li>
+              <li className='list-group-item'>
                 <div className='row'>
                   <div className='col-auto' style={{ margin: "auto", display: "flex" }}>
                     <FaEllipsisV style={{ verticalAlign: "middle", marginRight: "10px" }} />

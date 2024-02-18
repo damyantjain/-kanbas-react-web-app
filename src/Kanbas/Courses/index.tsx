@@ -8,6 +8,7 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
+import { FaBars, FaChevronDown } from "react-icons/fa";
 function Courses() {
   const { courseId } = useParams();
   const course = courses.find((course) => course._id === courseId);
@@ -18,9 +19,11 @@ function Courses() {
       </div>
       <hr></hr>
       <div className="row">
-        <div className="col-auto d-none d-md-block">
+        <div className="col-auto">
           <CourseNavigation />
         </div>
+
+
         <div className="col">
           <div>
             <Routes>
