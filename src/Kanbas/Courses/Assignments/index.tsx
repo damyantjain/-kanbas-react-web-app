@@ -8,7 +8,7 @@ function Assignments() {
   const assignmentList = assignments.filter(
     (assignment) => assignment.course === courseId);
   return (
-    <div className="col">
+    <div className="col me-2">
       <div className="row wd-margin-top">
         <div className="float-end wd-margin-right">
           <div className="wd-button float-end">

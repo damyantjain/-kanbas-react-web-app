@@ -9,7 +9,7 @@ import StudentViewButton from "../StudentViewButton";
 function Navbar() {
     const { courseId } = useParams();
     const { pathname } = useLocation();
-    const [slash, kanbas, coursess, id, screen, assignment] = pathname.split("/");
+    const [slash, kanbas, courses_, id, screen, assignment] = pathname.split("/");
     const course = courses.find((course) => course._id === courseId);
     return (
 
@@ -22,14 +22,13 @@ function Navbar() {
                             <nav className="wd-flex-grow-1 wd-inline" aria-label="breadcrumb">
                                 <ol className="breadcrumb">
                                     <li className="breadcrumb-item wd-top-bar"><Link to={`/Kanbas/Courses/${course?._id}/Home`}>{course?.number}</Link></li>
-                                    <li className="breadcrumb-item active wd-top-bar-text"><a href="#">Modules</a></li>
+                                    <li className="breadcrumb-item active wd-top-bar-text"><a href="#">{decodeURIComponent(screen)}</a></li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                     <div className="col">
-                        {pathname.includes("Home") && <StudentViewButton />}
-                        {pathname.includes("Modules") && <StudentViewButton />}
+                        {(pathname.includes("Home") || pathname.includes("Modules")) && <StudentViewButton />}
                     </div>
                 </div>
             </div>
