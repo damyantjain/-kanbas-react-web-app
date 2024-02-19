@@ -22,7 +22,7 @@ function Navbar() {
                             <nav className="wd-flex-grow-1 wd-inline" aria-label="breadcrumb">
                                 <ol className="breadcrumb">
                                     <li className="breadcrumb-item wd-top-bar"><Link to={`/Kanbas/Courses/${course?._id}/Home`}>{course?.number}</Link></li>
-                                    <li className="breadcrumb-item active wd-top-bar-text"><a href="#">{decodeURIComponent(screen)}</a></li>
+                                    <li className="breadcrumb-item active wd-top-bar-text"><Link to={"#"}>{decodeURIComponent(screen)}</Link></li>
                                 </ol>
                             </nav>
                         </div>

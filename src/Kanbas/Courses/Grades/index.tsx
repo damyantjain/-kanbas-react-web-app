@@ -1,6 +1,6 @@
 import { FaCaretLeft, FaCaretSquareDown, FaCaretSquareLeft, FaCaretSquareRight, FaCog, FaFilter } from "react-icons/fa";
 import { assignments, enrollments, grades, users } from "../../Database";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 function Grades() {
   const { courseId } = useParams();
   const as = assignments.filter((assignment) => assignment.course === courseId);
@@ -11,21 +11,21 @@ function Grades() {
       <div className="row">
         <div className="float-end me-5">
           <div className="wd-button float-end">
-            <a className="btn btn-secondary btn-sm" href="#" role="button">
+            <Link to={"#"} className="btn btn-secondary btn-sm" role="button">
               <FaCog />
-            </a>
+            </Link>
           </div>
 
           <div className="wd-button float-end">
-            <a className="btn btn-secondary btn-sm" href="#" role="button">
+          <Link to={"#"}  className="btn btn-secondary btn-sm" role="button">
               <FaCaretSquareLeft className="me-1" />
-              Export</a>
+              Export</Link>
           </div>
 
           <div className="wd-button float-end">
-            <a className="btn btn-secondary btn-sm" href="#" role="button">
+          <Link to={"#"}  className="btn btn-secondary btn-sm"  role="button">
               <FaCaretSquareRight className="me-1" />
-              Import</a>
+              Import</Link>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ function Grades() {
 
       <div className="row">
         <div className="float-end mt-3">
-          <a className="btn btn-secondary btn-sm" href="#" role="button">
+          <a className="btn btn-secondary btn-sm"  role="button">
             <FaFilter className="me-1" />
             Apply Filter</a>
         </div>

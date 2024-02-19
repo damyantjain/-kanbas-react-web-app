@@ -1,6 +1,7 @@
 import { FaCalendarCheck } from "react-icons/fa";
 import { moduleCalendar } from "../../Database";
 import { useParams } from "react-router";
+import { Link } from "react-router-dom";
 
 function Calender() {
     const { courseId } = useParams();
@@ -16,11 +17,11 @@ function Calender() {
         <ul className="list-group wd-coming-up">
             {task.map((item) => (
                 <li>
-                    <a href=""><span className="wd-coming-up-color-red">
+                    <Link to={"#"}><span className="wd-coming-up-color-red">
                         <FaCalendarCheck className="me-1" />
                         {item.title}</span>
                         <br /><span className="wd-fg-color-gray">{item.description} {item.dateTime}</span>
-                    </a>
+                    </Link>
                 </li>
             ))}
         </ul></>

@@ -2,6 +2,7 @@ import { FaBan, FaBell, FaCalendarCheck, FaCaretRight, FaChartBar, FaCheckCircle
 import ModuleList from "./List";
 import { moduleCalendar } from "../../Database";
 import Calender from "./Calendar";
+import { Link } from "react-router-dom";
 function Modules() {
   return (
     <div className="row">
@@ -9,32 +10,32 @@ function Modules() {
         <div className="flex-fill">
           <div className="d-flex justify-content-end gap-1 ">
 
-            <a className="btn btn-secondary btn-sm wd-button" href="#" role="button">
+            <Link to={"#"} className="btn btn-secondary btn-sm wd-button">
 
-              Collapse All</a>
+              Collapse All</Link>
 
-            <a className="btn btn-secondary btn-sm wd-button" href="#" role="button">
+              <Link to={"#"} className="btn btn-secondary btn-sm wd-button" role="button">
 
-              View Progress</a>
+              View Progress</Link>
 
             <div className="dropdown">
-              <a className="btn btn-secondary btn-sm dropdown-toggle wd-button" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
+            <Link to={"#"}  className="btn btn-secondary btn-sm dropdown-toggle wd-button" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown">
                 <i className="fa fa-check-circle-o" style={{ color: "green" }}></i>
-                Publish All</a>
+                Publish All</Link>
 
               <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a className="dropdown-item" href="#">None</a></li>
+                <li><Link to={"#"}  className="dropdown-item" >None</Link></li>
               </ul>
             </div>
 
-            <a className="btn btn-danger btn-sm" href="#" role="button">
+            <Link to={"#"}  className="btn btn-danger btn-sm"  role="button">
               <FaPlus />
-              Modules</a>
+              Modules</Link>
 
-            <a className="btn btn-secondary btn-sm wd-button" href="#" role="button">
+              <Link to={"#"}  className="btn btn-secondary btn-sm wd-button" role="button">
               <FaEllipsisV />
 
-            </a>
+            </Link>
           </div>
           <hr />
           <ModuleList />
@@ -58,13 +59,13 @@ function Modules() {
           </div>
           <div>
             <ul className="list-group wd-course-status">
-              <li><a href="#"><FaFileImport /> Import Existing Content</a></li>
-              <li><a href="#"><FaCaretRight /> Import from Commons</a></li>
-              <li><a href="#"><FaCrosshairs />  Choose Home Page</a></li>
-              <li><a href="#"><FaChartBar /> View Course Stream</a></li>
-              <li><a href="#"><FaNewspaper /> Announcement</a></li>
-              <li><a href="#"><FaChartBar /> New Analytics</a></li>
-              <li><a href="#"><FaBell /> View Course Notification</a></li>
+              <li><Link to={"#"}><FaFileImport /> Import Existing Content</Link></li>
+              <li><Link to={"#"}><FaCaretRight /> Import from Commons</Link></li>
+              <li><Link to={"#"}><FaCrosshairs />  Choose Home Page</Link></li>
+              <li><Link to={"#"}><FaChartBar /> View Course Stream</Link></li>
+              <li><Link to={"#"}><FaNewspaper /> Announcement</Link></li>
+              <li><Link to={"#"}><FaChartBar /> New Analytics</Link></li>
+              <li><Link to={"#"}><FaBell /> View Course Notification</Link></li>
             </ul>
           </div>
 
@@ -73,8 +74,8 @@ function Modules() {
           <ul className="list-group">
             <li className="d-flex justify-content-between align-items-start">
               <div>
-                <div><a href="#" className="wd-coming-up-color-red " style={{ textDecoration: "none" }}>
-                  <i className="fa fa-info-circle wd-coming-up-color-red pe-2"></i>  A1 - ENV + HTML</a></div>
+                <div><Link to={"#"} className="wd-coming-up-color-red " style={{ textDecoration: "none" }}>
+                  <i className="fa fa-info-circle wd-coming-up-color-red pe-2"></i>  A1 - ENV + HTML</Link></div>
                 <div className="wd-fg-color-gray"> 100 points - Sept 18 at 11:59pm</div>
               </div>
               <i className="fa fa-times wd-fg-color-gray"></i>
