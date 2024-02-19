@@ -1,7 +1,4 @@
-import { HiMiniBars3 } from "react-icons/hi2";
 import { courses } from "../../../Kanbas/Database";
-import "./index.css"
-
 import { Link, useLocation, useParams } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import StudentViewButton from "../StudentViewButton";
