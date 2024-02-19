@@ -1,4 +1,4 @@
-import { FaBan, FaBell, FaCaretRight, FaChartBar, FaCheckCircle, FaCrosshairs, FaFileImport, FaNewspaper } from "react-icons/fa";
+import { FaBan, FaBell, FaCaretRight, FaChartBar, FaCheckCircle, FaCrosshairs, FaFileImport, FaInfoCircle, FaNewspaper, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Calender from "./Calendar";
 
@@ -36,10 +36,10 @@ function SideBar() {
                 <li className="d-flex justify-content-between align-items-start">
                     <div>
                         <div><Link to={"#"} className="wd-coming-up-color-red " style={{ textDecoration: "none" }}>
-                            <i className="fa fa-info-circle wd-coming-up-color-red pe-2"></i>  A1 - ENV + HTML</Link></div>
+                            <FaInfoCircle />  A1 - ENV + HTML</Link></div>
                         <div className="wd-fg-color-gray"> 100 points - Sept 18 at 11:59pm</div>
                     </div>
-                    <i className="fa fa-times wd-fg-color-gray"></i>
+                    <FaTimes />
                 </li>
             </ul>
             <Calender />
