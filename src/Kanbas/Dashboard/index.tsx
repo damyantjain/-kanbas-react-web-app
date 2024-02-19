@@ -17,9 +17,9 @@ function Dashboard() {
                                 <img src={`/images/${course.image}`} className="card-img-top"
                                     style={{ height: 150 }} />
                                 <div className="card-body"
-                                    style={{ textDecoration: "none", color: "navy", fontWeight: "bold", whiteSpace: "nowrap" }}>
+                                    style={{ textDecoration: "none", color: "navy", fontWeight: "bold", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis"  }}>
                                     <Link className="card-title" to={`/Kanbas/Courses/${course._id}/Home`}
-                                        style={{ textDecoration: "none", color: "navy", fontWeight: "bold", whiteSpace: "nowrap" }}>
+                                        style={{ textDecoration: "none", overflow: "hidden", textOverflow: "ellipsis",  color: "navy", fontWeight: "bold", whiteSpace: "nowrap" }}>
                                         {course.name} </Link>
                                     <p className="card-text" style={{ color: "gray", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{course.description}</p>
                                     <FaPencilAlt aria-hidden="true" className="wd-fg-color-gray" />
