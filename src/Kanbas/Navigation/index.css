@@ -27,6 +27,15 @@
   margin-bottom: 5px;
 }
 
-.wd-kanbas-navigation a i.wd-account{
-    color: white;
+.wd-kanbas-navigation a i.wd-account {
+  color: white;
+}
+
+.wd-logo {
+  padding: 0px;
+  margin: 0px;
+  padding-right: 15px;
+  display: block;
+  background-size: contain;
+  height: 65px;
 }

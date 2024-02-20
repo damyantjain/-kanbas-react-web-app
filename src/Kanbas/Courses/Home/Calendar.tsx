@@ -9,9 +9,9 @@ function Calender() {
     return (<>
         <div className="d-flex wd-coming">
             <h5><strong>Coming Soon</strong></h5>
-            <a href=""
+            <Link to="#"
             ><i className="fa-regular fa-calendar-check calender-color"></i>
-                View Calender</a>
+                View Calender</Link>
         </div>
         <hr />
         <ul className="list-group wd-coming-up">
