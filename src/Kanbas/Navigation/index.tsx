@@ -1,7 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
 import "./index.css";
 import logo from "../images/NEULogo.png";
-import { FaTachometerAlt, FaRegUserCircle, FaBook, FaRegCalendarAlt, FaEnvelopeOpenText, FaClock, FaDesktop, FaCircle, FaQuestionCircle } from "react-icons/fa";
+import { FaTachometerAlt, FaRegUserCircle, FaBook, FaRegCalendarAlt, FaEnvelopeOpenText, FaClock, FaDesktop, FaCircle, FaQuestionCircle, FaArrowRight } from "react-icons/fa";
 function KanbasNavigation() {
   const links = [
     { label: "Account", icon: <FaRegUserCircle className="fs-2" /> },
@@ -11,7 +11,7 @@ function KanbasNavigation() {
     { label: "Inbox", icon: <FaEnvelopeOpenText className="fs-2" /> },
     { label: "History", icon: <FaClock className="fs-2" /> },
     { label: "Studio", icon: <FaDesktop className="fs-2" /> },
-    { label: "Commons", icon: <FaDesktop className="fs-2" /> },
+    { label: "Commons", icon: <FaArrowRight className="fs-2" /> },
     { label: "Help", icon: <FaQuestionCircle className="fs-2" /> },
   ];
   const { pathname } = useLocation();
