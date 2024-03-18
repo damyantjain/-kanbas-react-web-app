@@ -1,12 +1,18 @@
 import Button from 'react-bootstrap/Button';
 import "./index.css"
 import { FaCheckCircle, FaChevronDown, FaEllipsisV, FaPencilAlt, FaPlus, FaPlusCircle } from "react-icons/fa";
-import { Link, useParams } from "react-router-dom";
-import { assignments } from "../../Database";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import { useDispatch, useSelector } from 'react-redux';
+import { KanbasState } from '../../store';
 function Assignments() {
-  const { courseId } = useParams();
-  const assignmentList = assignments.filter(
-    (assignment) => assignment.course === courseId);
+
+    const { courseId } = useParams();
+    const assignmentsList = useSelector((state: KanbasState) =>
+        state.assignmentsReducer.assignments);
+    const assignmentList = assignmentsList.filter((a) => a.course === courseId);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
   return (
     <div className="col me-2">
       <div className="row wd-margin-top">
@@ -17,10 +23,10 @@ function Assignments() {
             </a>
           </div>
           <div className="wd-button float-end">
-            <Button variant="danger btn-sm">
-              <FaPlus className="me-1" />
+            <Link to={"../Assignments/Editor"} className="btn btn-danger btn-sm" role="button">
+            <FaPlus className="me-1" />
               Assignment
-            </Button>{' '}
+            </Link>
           </div>
 
           <div className="wd-button float-end">
@@ -63,7 +69,7 @@ function Assignments() {
                   </div>
                   <div className='col wd-fg-color-gray ps-0 ms-2'>
                     <Link style={{ color: 'green', textDecoration: 'none' }} className="fw-bold ps-0" to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}>
-                      {assignment.title}
+                      {assignment.name}
                     </Link>
                     <br />
                     {assignment.description} |

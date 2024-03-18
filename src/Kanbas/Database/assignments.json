@@ -1,65 +1,92 @@
 [
   {
     "_id": "A101",
-    "title": "Algorithm Analysis Assignment",
+    "name": "Algorithm Analysis Assignment",
     "description": "Analyze the time complexity of given algorithms.",
-    "dueDateTime": "Mar 20, 2024 at 11:59pm",
+    "dueDateTime": "2024-03-19",
+    "availableFromDate": "2024-03-18T12:00",
+    "availableUntilDate": "2024-03-18T12:00",
+    "points": 100,
     "course": "RS101"
   },
   {
     "_id": "A102",
-    "title": "Sorting Algorithms Project",
+    "name": "Sorting Algorithms Project",
     "description": "Implement and compare various sorting algorithms.",
-    "dueDateTime": "Mar 25, 2024 at 11:59pm",
+    "dueDateTime": "2024-03-18",
+    "availableFromDate": "2024-03-18",
+    "availableUntilDate": "2024-03-18",
+    "points": 100,
     "course": "RS101"
   },
   {
     "_id": "A103",
-    "title": "Graph Algorithms Assignment",
+    "name": "Graph Algorithms Assignment",
     "description": "Solve graph problems using different graph algorithms.",
-    "dueDateTime": "Mar 30, 2024 at 11:59pm",
+    "dueDateTime": "2024-03-18",
+    "availableFromDate": "2024-03-18",
+    "availableUntilDate": "2024-03-18",
+    "points": 100,
     "course": "RS101"
   },
   {
     "_id": "A201",
-    "title": "HTML/CSS Assignment",
+    "name": "HTML/CSS Assignment",
     "description": "Build a webpage using HTML and CSS.",
-    "dueDateTime": "Mar 22, 2024 at 11:59pm",
+    "dueDateTime": "2024-03-18",
+    "availableFromDate": "2024-03-18",
+    "availableUntilDate": "2024-03-18",
+    "points": 100,
     "course": "RS102"
   },
   {
     "_id": "A202",
-    "title": "React.js Project",
+    "name": "React.js Project",
     "description": "Develop a web application using React.js.",
-    "dueDateTime": "Mar 27, 2024 at 11:59pm",
+    "dueDateTime": "2024-03-18",
+    "availableFromDate": "2024-03-18",
+    "availableUntilDate": "2024-03-18",
+    "points": 100,
     "course": "RS102"
   },
   {
     "_id": "A203",
-    "title": "Node.js Assignment",
+    "name": "Node.js Assignment",
     "description": "Create a server-side application using Node.js.",
-    "dueDateTime": "Oct 2, 2024 at 11:59pm",
+    "dueDateTime": "2024-03-18",
+    "availableFromDate": "2024-03-18",
+    "availableUntilDate": "2024-03-18",
+    "points": 100,
     "course": "RS102"
   },
   {
     "_id": "A301",
-    "title": "Java Programming Assignment",
+    "name": "Java Programming Assignment",
     "description": "Write programs to demonstrate object-oriented concepts in Java.",
-    "dueDateTime": "Mar 24, 2024 at 11:59pm",
+    "dueDateTime": "2024-03-18",
+    "availableFromDate": "2024-03-18",
+    "availableUntilDate": "2024-03-18",
+    "points": 100,
     "course": "RS103"
   },
   {
     "_id": "A302",
-    "title": "Design Patterns Project",
+    "name": "Design Patterns Project",
     "description": "Implement common design patterns in a software project.",
-    "dueDateTime": "Mar 29, 2024 at 11:59pm",
+    "dueDateTime": "2024-03-18",
+    "availableFromDate": "2024-03-18",
+    "availableUntilDate": "2024-03-18",
+    "points": 100,
     "course": "RS103"
   },
   {
     "_id": "A303",
-    "title": "Testing and Debugging Assignment",
+    "name": "Testing and Debugging Assignment",
     "description": "Write test cases and debug code to improve software quality.",
-    "dueDateTime": "Apr 4, 2024 at 11:59pm",
+    "dueDateTime": "2024-03-18",
+    "availableFromDate": "2024-03-18",
+    "availableUntilDate": "2024-03-18",
+    "points": 100,
     "course": "RS103"
   }
 ]
