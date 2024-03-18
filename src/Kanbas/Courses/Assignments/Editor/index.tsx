@@ -1,5 +1,4 @@
-import React from 'react';
-import { assignments } from '../../../Database';
+import React, { useEffect } from 'react';
 import {
     addAssignment,
     deleteAssignment,
@@ -13,21 +12,30 @@ import { KanbasState } from '../../../store';
 
 function AssignmentEditor() {
     const { assignmentId, courseId } = useParams();
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const isNewAssignment = !assignmentId || assignmentId.trim() === '';
     const assignmentList = useSelector((state: KanbasState) =>
         state.assignmentsReducer.assignments);
     const assignment = useSelector((state: KanbasState) =>
         state.assignmentsReducer.assignment);
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+    useEffect(() => {
+        const assignmentData = assignmentList.find(a => a._id === assignmentId);
+        if (assignmentData) {
+          dispatch(setAssignment(assignmentData));
+          console.log("Hello"); 
+        } else {
+            dispatch(cancelAssignmentUpdate(assignment));
+        }
+      }, [dispatch, assignmentId]);
     const handleSave = () => {
         if (isNewAssignment) {
             const newAssignment = { ...assignment, _id: new Date().getTime().toString(), course: courseId };
             console.log(newAssignment);
-            dispatch(updateAssignment(newAssignment._id));
+            dispatch(updateAssignment(newAssignment));
             dispatch(addAssignment(newAssignment));
         } else {
-            dispatch(updateAssignment(assignment._id));
+            dispatch(updateAssignment(assignment));
         }
         navigate(`/Kanbas/Courses/${courseId}/Assignments`);
     };
@@ -43,8 +51,8 @@ function AssignmentEditor() {
                 onChange={(e: { target: { value: any; }; }) => dispatch(setAssignment({ ...assignment, name: e.target.value }))}
                 className="form-control mb-2" />
             <br />
-            <textarea className="form-control" cols={50} rows={5}
-                onChange={(e) => dispatch(setAssignment({ ...assignment, description: e.target.value }))}>Hello</textarea>
+            <textarea value={assignment?.description} className="form-control" cols={50} rows={5}
+                onChange={(e) => dispatch(setAssignment({ ...assignment, description: e.target.value }))}></textarea>
             <br />
             <div className="row g-0 text-end" style={{ paddingBottom: "15px" }}>
                 <div className="col-6 col-md-4" style={{ paddingTop: "5px", paddingRight: "15px" }}>
@@ -159,11 +167,11 @@ function AssignmentEditor() {
                             <div className="row">
                                 <div className="col">
                                     <input className="form-control w-75" type="datetime-local"
-                                    onChange={(e) =>  dispatch(setAssignment({ ...assignment, availableFromDate: e.target.value }))} />
+                                        onChange={(e) => dispatch(setAssignment({ ...assignment, availableFromDate: e.target.value }))} />
                                 </div>
                                 <div className="col">
                                     <input className="form-control w-75" type="datetime-local"
-                                    onChange={(e) =>  dispatch(setAssignment({ ...assignment, availableUntilDate: e.target.value }))} />
+                                        onChange={(e) => dispatch(setAssignment({ ...assignment, availableUntilDate: e.target.value }))} />
                                 </div>
 
                             </div>
