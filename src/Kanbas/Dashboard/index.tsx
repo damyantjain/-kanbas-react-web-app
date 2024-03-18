@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { courses } from "../Database";
-import { FaPencilAlt } from "react-icons/fa";
+import { FaPencilAlt, FaTrash } from "react-icons/fa";
 import "./index.css";
 
 function Dashboard(
@@ -47,21 +47,21 @@ function Dashboard(
                                         style={{ textDecoration: "none", overflow: "hidden", textOverflow: "ellipsis", color: "navy", fontWeight: "bold", whiteSpace: "nowrap" }}>
                                         {course.name} </Link>
                                     <br />
-                                    <button className="btn btn-success btn-sm me-1" onClick={(event) => {
+                                    <p className="card-text" style={{ color: "gray", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{course.description}</p>
+                                    <button className="btn btn-sm me-1" onClick={(event) => {
                                         event.preventDefault();
                                         setCourse(course);
                                     }}>
-                                        Edit
+                                        <FaPencilAlt aria-hidden="true" style={{color: "gray", height: "30px"}} /> {}
+
                                     </button>
 
-                                    <button className="btn btn-danger btn-sm me-1" onClick={(event) => {
+                                    <button className="btn btn-sm me-1" onClick={(event) => {
                                         event.preventDefault();
                                         deleteCourse(course._id);
                                     }}>
-                                        Delete
+                                        <FaTrash aria-hidden="true" style={{color: "red", height: "30px"}}/> {}
                                     </button>
-                                    <p className="card-text" style={{ color: "gray", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>{course.description}</p>
-                                    <FaPencilAlt aria-hidden="true" className="wd-fg-color-gray" />
                                 </div>
                             </div>
                         </div>
