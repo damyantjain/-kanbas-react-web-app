@@ -22,12 +22,12 @@ function AssignmentEditor() {
     useEffect(() => {
         const assignmentData = assignmentList.find(a => a._id === assignmentId);
         if (assignmentData) {
-          dispatch(setAssignment(assignmentData));
-          console.log("Hello"); 
+            dispatch(setAssignment(assignmentData));
+            console.log("Hello");
         } else {
             dispatch(cancelAssignmentUpdate(assignment));
         }
-      }, [dispatch, assignmentId]);
+    }, [dispatch, assignmentId]);
     const handleSave = () => {
         if (isNewAssignment) {
             const newAssignment = { ...assignment, _id: new Date().getTime().toString(), course: courseId };
@@ -64,7 +64,7 @@ function AssignmentEditor() {
                         type="number"
                         placeholder="Points"
                         aria-label="default input example"
-                        value="100"
+                        value={assignment?.points}
                         onChange={(e) => dispatch(setAssignment({ ...assignment, points: e.target.value }))}
                     />
                 </div>
@@ -145,8 +145,9 @@ function AssignmentEditor() {
                         />
                         <br />
                         <b>Due</b>
-                        <input className="form-control" type="datetime-local"
+                        <input className="form-control" type="datetime-local" value={assignment?.dueDateTime}
                             onChange={(e) => dispatch(setAssignment({ ...assignment, dueDateTime: e.target.value }))} />
+
                         <br />
                         <div
                             className="wd-flex-row-container"
@@ -166,11 +167,11 @@ function AssignmentEditor() {
 
                             <div className="row">
                                 <div className="col">
-                                    <input className="form-control w-75" type="datetime-local"
+                                    <input className="form-control w-75" type="datetime-local" value={assignment?.availableFromDate}
                                         onChange={(e) => dispatch(setAssignment({ ...assignment, availableFromDate: e.target.value }))} />
                                 </div>
                                 <div className="col">
-                                    <input className="form-control w-75" type="datetime-local"
+                                    <input className="form-control w-75" type="datetime-local" value={assignment?.availableUntilDate}
                                         onChange={(e) => dispatch(setAssignment({ ...assignment, availableUntilDate: e.target.value }))} />
                                 </div>
 
@@ -186,9 +187,11 @@ function AssignmentEditor() {
                         Notify users that this content has changed
                     </span>
                     <span>
-                        <button onClick={handleCancel} className="btn btn-danger" style={{ height: "fit-content", backgroundColor: "#E0E0E0" }}>
+                        <Link to={`/Kanbas/Courses/${courseId}/Assignments`}
+                            onClick={() => dispatch(cancelAssignmentUpdate(assignment))}
+                            className="btn" style={{ height: "fit-content", backgroundColor: "#E0E0E0" }}>
                             Cancel
-                        </button>
+                        </Link>
                         <button onClick={handleSave} className="btn btn-danger" style={{ marginRight: "5px" }}>
                             Save
                         </button>

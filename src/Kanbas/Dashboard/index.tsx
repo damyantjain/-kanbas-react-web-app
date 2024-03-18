@@ -24,16 +24,16 @@ function Dashboard(
                 onChange={(e) => setCourse({ ...course, startDate: e.target.value })} />
             <input value={course.endDate} className="form-control" type="date"
                 onChange={(e) => setCourse({ ...course, endDate: e.target.value })} />
-            <button onClick={addNewCourse} >
+            <button className="btn btn-danger btn-sm me-1" onClick={addNewCourse} >
                 Add
             </button>
-            <button onClick={updateCourse} >
+            <button className="btn btn-primary btn-sm me-1" onClick={updateCourse} >
                 Update
             </button>
 
 
             <hr />
-            <h2>Published Courses (3)</h2> <hr />
+            <h2>Published Courses ({courses.length})</h2> <hr />
             <div className="row">
                 <div className="row row-cols row-cols-md-5 g-4">
                     {courses.map((course) => (
@@ -47,14 +47,14 @@ function Dashboard(
                                         style={{ textDecoration: "none", overflow: "hidden", textOverflow: "ellipsis", color: "navy", fontWeight: "bold", whiteSpace: "nowrap" }}>
                                         {course.name} </Link>
                                     <br />
-                                    <button onClick={(event) => {
+                                    <button className="btn btn-success btn-sm me-1" onClick={(event) => {
                                         event.preventDefault();
                                         setCourse(course);
                                     }}>
                                         Edit
                                     </button>
 
-                                    <button onClick={(event) => {
+                                    <button className="btn btn-danger btn-sm me-1" onClick={(event) => {
                                         event.preventDefault();
                                         deleteCourse(course._id);
                                     }}>

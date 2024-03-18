@@ -4,6 +4,7 @@ import { FaCheckCircle, FaChevronDown, FaEllipsisV, FaPencilAlt, FaPlus, FaPlusC
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from 'react-redux';
 import { KanbasState } from '../../store';
+import { deleteAssignment } from './assignmentsReducer';
 function Assignments() {
 
     const { courseId } = useParams();
@@ -12,6 +13,17 @@ function Assignments() {
     const assignmentList = assignmentsList.filter((a) => a.course === courseId);
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    const handleDelete = () => {
+      const result = window.confirm("Do you want to proceed?");
+      if (result) {
+        console.log("User clicked Yes");
+        return true;
+      } else {
+        console.log("User clicked No");
+        return false;
+      }
+    };
 
   return (
     <div className="col me-2">
@@ -73,10 +85,14 @@ function Assignments() {
                     </Link>
                     <br />
                     {assignment.description} |
-                    <br /><b>Due</b> {assignment.dueDateTime} | 100 points
+                    <br /><b>Due</b> {assignment.dueDateTime.slice(0,16)} | {assignment.points} points
                   </div>
                   <div className="col-auto" style={{ margin: "auto", display: "flex" }}>
-
+                  <button className="btn m-0 pt-0 pb-0 me-1 btn-danger btn-sm"
+                  onClick={() => {handleDelete() ? dispatch(deleteAssignment(assignment._id)) : 
+                    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+                  }}>
+                  Delete</button>
                     <FaCheckCircle
                       style={{ color: "green" }} />
                     <FaEllipsisV style={{ verticalAlign: "middle" }} />
