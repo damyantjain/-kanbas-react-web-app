@@ -58,7 +58,7 @@ function Grades() {
           <thead>
             <tr>
               <th>Student Name</th>
-              {as.map((assignment) => (<th>{assignment.title}</th>))}
+              {as.map((assignment) => (<th>{assignment.name}</th>))}
             </tr>
           </thead>
           <tbody>
