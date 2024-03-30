@@ -5,7 +5,6 @@ import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import store from "./store";
 import { Provider } from "react-redux";
-import { courses } from "./Database";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
