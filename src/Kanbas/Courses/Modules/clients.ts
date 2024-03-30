@@ -1,5 +1,4 @@
 import axios from "axios";
-import Module from "module";
 const COURSES_API = "http://localhost:4000/api/courses";
 const MODULES_API = "http://localhost:4000/api/modules";
 
