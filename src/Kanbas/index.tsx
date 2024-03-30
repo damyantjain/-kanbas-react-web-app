@@ -45,7 +45,7 @@ function Kanbas() {
       course
     );
     setCourses(
-      courses.map((c) => {
+      courseList.map((c) => {
         if (c._id === course._id) {
           return course;
         }

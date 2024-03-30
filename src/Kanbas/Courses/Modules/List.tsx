@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "./index.css";
-import { modules } from "../../Database";
 import { FaEllipsisV, FaCheckCircle, FaPlusCircle } from "react-icons/fa";
 import { useParams } from "react-router";
 import { useSelector, useDispatch } from "react-redux";
@@ -13,7 +12,7 @@ import {
 } from "./reducer";
 import { KanbasState } from "../../store";
 import { Button } from "react-bootstrap";
-import { findModulesForCourse } from "./clients";
+import * as client from "./clients";
 function ModuleList() {
   const { courseId } = useParams();
   const modulesList = useSelector(
@@ -25,12 +24,33 @@ function ModuleList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    findModulesForCourse(courseId).then((modules) =>
+    client.findModulesForCourse(courseId).then((modules) =>
       dispatch(setModules(modules))
     );
   }, [courseId, dispatch]);
 
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
+
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId: string) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    console.log(status);
+    dispatch(updateModule(module));
+  };
+
+
+
   return (
     <div>
       <ul className="list-group wd-modules">
@@ -50,9 +70,7 @@ function ModuleList() {
                 className="p-1"
                 style={{ borderRadius: "5px" }}
                 variant="success btn-sm"
-                onClick={() =>
-                  dispatch(addModule({ ...module, course: courseId }))
-                }
+                onClick={handleAddModule}
               >
                 Add
               </Button>
@@ -60,7 +78,7 @@ function ModuleList() {
                 className="p-1 ms-1"
                 style={{ borderRadius: "5px" }}
                 variant="primary btn-sm"
-                onClick={() => dispatch(updateModule(module))}
+                onClick={handleUpdateModule}
               >
                 Update
               </Button>
@@ -95,7 +113,7 @@ function ModuleList() {
                   <button
                     style={{ borderRadius: "5px" }}
                     className="btn btn-danger btn-sm ps-1 pe-1 me-1"
-                    onClick={() => dispatch(deleteModule(module._id))}
+                    onClick={() => handleDeleteModule(module._id)}
                   >
                     Delete
                   </button>
