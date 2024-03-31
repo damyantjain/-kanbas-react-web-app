@@ -8,9 +8,12 @@ import { Provider } from "react-redux";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
+
 function Kanbas() {
+  console.log("API_BASE", API_BASE);
   const [courseList, setCourses] = useState<any[]>([]);
-  const COURSES_API = "http://localhost:4000/api/courses";
+  const COURSES_API = `${API_BASE}/api/courses`;
 
   const [course, setCourse] = useState({
     _id: "0",
