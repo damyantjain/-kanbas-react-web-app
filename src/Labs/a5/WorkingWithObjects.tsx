@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+const API_BASE = process.env.REACT_APP_API_BASE;
 function WorkingWithObjects() {
 
   const [assignment, setAssignment] = useState({
@@ -11,7 +12,7 @@ function WorkingWithObjects() {
     completed: false,
     score: 0,
   });
-  const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment";
+  const ASSIGNMENT_URL = `${API_BASE}/a5/assignment`;
 
   const [module, setModule] = useState({
     id: 1,
@@ -47,13 +48,13 @@ function WorkingWithObjects() {
         Fetch Assignment
       </button>
       <h4>Retrieving Objects</h4>
-      <a className="btn btn-primary" href="http://localhost:4000/a5/assignment">
+      <a className="btn btn-primary" href={`${API_BASE}/a5/assignment`}>
         Get Assignment
       </a>
       <h4>Retrieving Properties</h4>
       <a
         className="btn btn-primary"
-        href="http://localhost:4000/a5/assignment/title"
+        href={`${API_BASE}/a5/assignment/title`}
       >
         Get Title
       </a>
@@ -72,13 +73,13 @@ function WorkingWithObjects() {
         value={assignment.title}
       />
       <h4>Retrieving Module</h4>
-      <a className="btn btn-primary" href="http://localhost:4000/a5/module">
+      <a className="btn btn-primary" href={`${API_BASE}/a5/module`}>
         Get Module
       </a>
       <h4>Get Module Name</h4>
       <a
         className="btn btn-primary"
-        href="http://localhost:4000/a5/module/name"
+        href={`${API_BASE}/a5/module/name`}
       >
         Get Module Name
       </a>
@@ -90,7 +91,7 @@ function WorkingWithObjects() {
       />
       <a
         className="btn btn-primary"
-        href={`http://localhost:4000/a5/module/name/${module.name}`}
+        href={`${API_BASE}/a5/module/name/${module.name}`}
       >
         Update Module Name
       </a>
@@ -98,7 +99,7 @@ function WorkingWithObjects() {
       <input type="checkbox" checked={assignment.completed} onChange={(e) => setAssignment({...assignment, completed: (e.target.checked)})}/>
         <a
             className="btn btn-primary"
-            href={`http://localhost:4000/a5/assignment/completed/${assignment.completed}`}
+            href={`${API_BASE}/a5/assignment/completed/${assignment.completed}`}
         >
             Update Assignment Status
         </a>
@@ -112,7 +113,7 @@ function WorkingWithObjects() {
         />
         <a
             className="btn btn-primary"
-            href={`http://localhost:4000/a5/assignment/score/${assignment.score}`}
+            href={`${API_BASE}/a5/assignment/score/${assignment.score}`}
         >
             Update Assignment Score
         </a>
@@ -126,7 +127,7 @@ function WorkingWithObjects() {
         />
         <a
             className="btn btn-primary"
-            href={`http://localhost:4000/a5/module/description/${module.description}`}
+            href={`${API_BASE}/a5/module/description/${module.description}`}
         >
             Update Module Description
         </a>
