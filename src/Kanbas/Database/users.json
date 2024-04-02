@@ -6,7 +6,7 @@
     "firstName": "Naruto",
     "lastName": "Uzumaki",
     "email": "naruto@leafvillage.com",
-    "dob": "October 10, 1997",
+    "dob": "1997-10-10",
     "role": "STUDENT"
   },
   {
@@ -16,7 +16,7 @@
     "firstName": "Sasuke",
     "lastName": "Uchiha",
     "email": "sasuke@leafvillage.com",
-    "dob": "July 23, 1997",
+    "dob": "1997-07-23",
     "role": "STUDENT"
   },
   {
@@ -26,7 +26,7 @@
     "firstName": "Sakura",
     "lastName": "Haruno",
     "email": "sakura@leafvillage.com",
-    "dob": "March 28, 1997",
+    "dob": "1997-03-28",
     "role": "STUDENT"
   },
   {
@@ -36,7 +36,7 @@
     "firstName": "Kakashi",
     "lastName": "Hatake",
     "email": "kakashi@leafvillage.com",
-    "dob": "September 15, 1978",
+    "dob": "1978-09-15",
     "role": "STUDENT"
   },
   {
@@ -46,7 +46,7 @@
     "firstName": "Rock",
     "lastName": "Lee",
     "email": "rocklee@leafvillage.com",
-    "dob": "November 27, 1995",
+    "dob": "1995-11-27",
     "role": "STUDENT"
   },
   {
@@ -56,7 +56,7 @@
     "firstName": "Neji",
     "lastName": "Hyuga",
     "email": "neji@leafvillage.com",
-    "dob": "July 3, 1995",
+    "dob": "1995-07-03",
     "role": "STUDENT"
   },
   {
@@ -66,7 +66,7 @@
     "firstName": "Hinata",
     "lastName": "Hyuga",
     "email": "hinata@leafvillage.com",
-    "dob": "December 27, 1994",
+    "dob": "1994-12-27",
     "role": "STUDENT"
   },
   {
@@ -76,7 +76,7 @@
     "firstName": "Shikamaru",
     "lastName": "Nara",
     "email": "shikamaru@leafvillage.com",
-    "dob": "September 22, 1995",
+    "dob": "1995-09-22",
     "role": "STUDENT"
   },
   {
@@ -86,7 +86,7 @@
     "firstName": "Choji",
     "lastName": "Akimichi",
     "email": "choji@leafvillage.com",
-    "dob": "May 1, 1996",
+    "dob": "1996-05-01",
     "role": "STUDENT"
   },
   {
@@ -96,7 +96,7 @@
     "firstName": "Ino",
     "lastName": "Yamanaka",
     "email": "ino@leafvillage.com",
-    "dob": "September 23, 1996",
+    "dob": "1996-09-23",
     "role": "STUDENT"
   },
   {
@@ -106,7 +106,7 @@
     "firstName": "Shino",
     "lastName": "Aburame",
     "email": "shino@leafvillage.com",
-    "dob": "January 23, 1996",
+    "dob": "1996-01-23",
     "role": "STUDENT"
   },
   {
@@ -116,7 +116,7 @@
     "firstName": "Kiba",
     "lastName": "Inuzuka",
     "email": "kiba@leafvillage.com",
-    "dob": "July 7, 1995",
+    "dob": "1995-07-07",
     "role": "STUDENT"
   },
   {
@@ -126,7 +126,7 @@
     "firstName": "Tenten",
     "lastName": "",
     "email": "tenten@leafvillage.com",
-    "dob": "March 9, 1996",
+    "dob": "1996-03-09",
     "role": "STUDENT"
   },
   {
@@ -136,7 +136,7 @@
     "firstName": "Shizune",
     "lastName": "",
     "email": "shizune@leafvillage.com",
-    "dob": "November 18, 1980",
+    "dob": "1980-11-18",
     "role": "STUDENT"
   },
   {
@@ -146,7 +146,7 @@
     "firstName": "Tsunade",
     "lastName": "",
     "email": "tsunade@leafvillage.com",
-    "dob": "August 2, 1960",
+    "dob": "1960-08-02",
     "role": "STUDENT"
   },
   {
@@ -156,7 +156,7 @@
     "firstName": "Jiraiya",
     "lastName": "",
     "email": "jiraiya@leafvillage.com",
-    "dob": "November 11, 1960",
+    "dob": "1960-11-11",
     "role": "STUDENT"
   },
   {
@@ -166,7 +166,7 @@
     "firstName": "Orochimaru",
     "lastName": "",
     "email": "orochimaru@leafvillage.com",
-    "dob": "October 27, 1960",
+    "dob": "1960-10-27",
     "role": "STUDENT"
   },
   {
@@ -176,7 +176,7 @@
     "firstName": "Hinata",
     "lastName": "Uzumaki",
     "email": "hinata@leafvillage.com",
-    "dob": "December 27, 1994",
+    "dob": "1994-12-27",
     "role": "STUDENT"
   },
   {
@@ -186,7 +186,7 @@
     "firstName": "Shikadai",
     "lastName": "Nara",
     "email": "shikadai@leafvillage.com",
-    "dob": "September 22, 2006",
+    "dob": "2006-09-22",
     "role": "STUDENT"
   },
   {
@@ -196,7 +196,7 @@
     "firstName": "Boruto",
     "lastName": "Uzumaki",
     "email": "boruto@leafvillage.com",
-    "dob": "March 27, 2005",
+    "dob": "2005-03-27",
     "role": "STUDENT"
   }
 ]
