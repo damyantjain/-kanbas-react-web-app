@@ -16,7 +16,7 @@ export default function Profile() {
   const fetchProfile = async () => {
     const account = await client.profile();
     console.log(account);
-    if (account !== null) {
+    if (account !== null && account.dob && account.dob !== "") {
       account.dob = new Date(account.dob).toISOString().split("T")[0];
     }
     setProfile(account);
@@ -32,7 +32,10 @@ export default function Profile() {
   return (
     <div>
       <h1>Profile</h1>
-      <Link to="/Kanbas/Account/Admin/Users" className="btn btn-warning w-100 mb-2">
+      <Link
+        to="/Kanbas/Account/Admin/Users"
+        className="btn btn-warning w-100 mb-2"
+      >
         Users
       </Link>
       {profile && (
