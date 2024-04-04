@@ -28,9 +28,13 @@ export default function Profile() {
   const save = async () => {
     await client.updateUser(profile);
   };
+  const signout = async () => {
+    await client.signout();
+    navigate("/Kanbas/Account/Signin");
+  };
 
   return (
-    <div>
+    <div className="col-md-4 col-12">
       <h1>Profile</h1>
       <Link
         to="/Kanbas/Account/Admin/Users"
@@ -42,6 +46,7 @@ export default function Profile() {
         <form>
           <div className="form-group">
             <input
+              placeholder="username"
               className="form-control mb-2"
               value={profile.username}
               onChange={(e) =>
@@ -49,14 +54,15 @@ export default function Profile() {
               }
             />
             <input
+              placeholder="password"
               className="form-control mb-2"
-              type="password"
               value={profile.password}
               onChange={(e) =>
                 setProfile({ ...profile, password: e.target.value })
               }
             />
             <input
+              placeholder="first name"
               className="form-control mb-2"
               value={profile.firstName}
               onChange={(e) =>
@@ -64,6 +70,7 @@ export default function Profile() {
               }
             />
             <input
+              placeholder="last name"
               className="form-control mb-2"
               value={profile.lastName}
               onChange={(e) =>
@@ -71,12 +78,14 @@ export default function Profile() {
               }
             />
             <input
+              placeholder="date of birth"
               className="form-control mb-2"
               value={profile.dob}
               type="date"
               onChange={(e) => setProfile({ ...profile, dob: e.target.value })}
             />
             <input
+              placeholder="email"
               className="form-control mb-2"
               value={profile.email}
               onChange={(e) =>
@@ -92,8 +101,11 @@ export default function Profile() {
               <option value="FACULTY">Faculty</option>
               <option value="STUDENT">Student</option>
             </select>
-            <button className="form-control btn btn-primary" onClick={save}>
+            <button className="form-control btn btn-primary mb-2" onClick={save}>
               Save
+            </button>
+            <button className="form-control btn btn-danger" onClick={signout}>
+              Signout
             </button>
           </div>
         </form>
