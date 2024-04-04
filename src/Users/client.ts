@@ -9,6 +9,7 @@ export interface User {
   firstName: string;
   lastName: string;
 }
+axios.defaults.withCredentials = true;
 export const signin = async (credentials: User) => {
   const response = await axios.post(`${USERS_API}/signin`, credentials);
   return response.data;
