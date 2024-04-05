@@ -24,7 +24,7 @@ function AssignmentEditor() {
   useEffect(() => {
     const assignmentDataMain = assignmentList.find((a) => a._id === assignmentId);
     const assignmentData = { ...assignmentDataMain };
-    if (assignmentData) {
+    if (assignmentDataMain) {
       if (
         assignmentData.availableFromDate &&
         assignmentData.availableFromDate !== ""
