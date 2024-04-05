@@ -22,8 +22,35 @@ function AssignmentEditor() {
     (state: KanbasState) => state.assignmentsReducer.assignment
   );
   useEffect(() => {
-    const assignmentData = assignmentList.find((a) => a._id === assignmentId);
+    const assignmentDataMain = assignmentList.find((a) => a._id === assignmentId);
+    const assignmentData = { ...assignmentDataMain };
     if (assignmentData) {
+      if (
+        assignmentData.availableFromDate &&
+        assignmentData.availableFromDate !== ""
+      ) {
+
+        assignmentData.availableFromDate = new Date(
+          assignmentData.availableFromDate
+        )
+          .toISOString()
+          .split("T")[0];
+      }
+      if (
+        assignmentData.availableUntilDate &&
+        assignmentData.availableUntilDate !== ""
+      ) {
+        assignmentData.availableUntilDate = new Date(
+          assignmentData.availableUntilDate
+        )
+          .toISOString()
+          .split("T")[0];
+      }
+      if (assignmentData.dueDateTime && assignmentData.dueDateTime !== "") {
+        assignmentData.dueDateTime = new Date(assignmentData.dueDateTime)
+          .toISOString()
+          .split("T")[0];
+      }
       dispatch(setAssignment(assignmentData));
     } else {
       dispatch(cancelAssignmentUpdate(assignment));
@@ -61,6 +88,7 @@ function AssignmentEditor() {
     dispatch(cancelAssignmentUpdate(assignment));
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
+
   return (
     <div>
       <h2>Assignment Name</h2>
@@ -207,7 +235,7 @@ function AssignmentEditor() {
             <b>Due</b>
             <input
               className="form-control"
-              type="datetime-local"
+              type="date"
               value={assignment?.dueDateTime}
               onChange={(e) =>
                 dispatch(
@@ -237,7 +265,7 @@ function AssignmentEditor() {
                 <div className="col">
                   <input
                     className="form-control w-75"
-                    type="datetime-local"
+                    type="date"
                     value={assignment?.availableFromDate}
                     onChange={(e) =>
                       dispatch(
@@ -252,7 +280,7 @@ function AssignmentEditor() {
                 <div className="col">
                   <input
                     className="form-control w-75"
-                    type="datetime-local"
+                    type="date"
                     value={assignment?.availableUntilDate}
                     onChange={(e) =>
                       dispatch(
