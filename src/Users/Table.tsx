@@ -20,7 +20,6 @@ export default function UserTable() {
   const createUser = async () => {
     try {
       const newUser = await client.createUser(user);
-      console.log(newUser);
       setUsers([newUser, ...users]);
     } catch (err) {
       console.log(err);
@@ -28,9 +27,7 @@ export default function UserTable() {
   };
   const deleteUser = async (user: User) => {
     try {
-      console.log("hjiii");
       await client.deleteUser(user);
-      console.log(user);
       setUsers(users.filter((u) => u._id !== user._id));
     } catch (err) {
       console.log(err);

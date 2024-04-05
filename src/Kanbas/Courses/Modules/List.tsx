@@ -24,9 +24,9 @@ function ModuleList() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    client.findModulesForCourse(courseId).then((modules) =>
-      dispatch(setModules(modules))
-    );
+    client
+      .findModulesForCourse(courseId)
+      .then((modules) => dispatch(setModules(modules)));
   }, [courseId, dispatch]);
 
   const [selectedModule, setSelectedModule] = useState(modulesList[0]);
@@ -48,8 +48,6 @@ function ModuleList() {
     console.log(status);
     dispatch(updateModule(module));
   };
-
-
 
   return (
     <div>
