@@ -34,6 +34,7 @@ Welcome to Kanbas, a Canvas Clone, a user-friendly Learning Management System (L
   <img src="https://github.com/damyantjain/kanbas-react-web-app/raw/master/Screenshots/2.png" width="500" alt="Module Page">
   <img src="https://github.com/damyantjain/kanbas-react-web-app/raw/master/Screenshots/3.png" width="500" alt="Assignment Page">
 </div>
+
 ## Installation
 
 To run Kanbas locally, follow these steps:
