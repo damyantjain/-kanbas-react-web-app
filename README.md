@@ -29,12 +29,11 @@ Welcome to Kanbas, a Canvas Clone, a user-friendly Learning Management System (L
 - **Frontend**: Hosted on [Netlify](https://strong-cheesecake-148352.netlify.app/)
 
 ## Screenshots
-![Dashboard](https://github.com/damyantjain/kanbas-react-web-app/raw/master/Screenshots/1.png)
-
-![Module Page](https://github.com/damyantjain/kanbas-react-web-app/raw/master/Screenshots/2.png)
-
-![Assignment Page](https://github.com/damyantjain/kanbas-react-web-app/raw/master/Screenshots/3.png)
-
+<div align="center">
+  <img src="https://github.com/damyantjain/kanbas-react-web-app/raw/master/Screenshots/1.png" width="500" alt="Dashboard">
+  <img src="https://github.com/damyantjain/kanbas-react-web-app/raw/master/Screenshots/2.png" width="500" alt="Module Page">
+  <img src="https://github.com/damyantjain/kanbas-react-web-app/raw/master/Screenshots/3.png" width="500" alt="Assignment Page">
+</div>
 ## Installation
 
 To run Kanbas locally, follow these steps:
