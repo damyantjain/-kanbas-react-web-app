@@ -52,7 +52,3 @@ To run Kanbas locally, follow these steps:
 5. Enjoy a seamless teaching and learning experience with Kanbas!
 
 Thank you for choosing Canvas Clone for your teaching and learning needs! We hope you find it helpful and intuitive.
-
-![Canvas Clone Logo](/path/to/logo.png)
-
-Insert the logo of your application here.
