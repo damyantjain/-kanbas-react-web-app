@@ -2,6 +2,8 @@
 
 Welcome to Kanbas, a Canvas Clone, a user-friendly Learning Management System (LMS) designed to streamline the teaching and learning process. With Kanbas, educators can easily manage courses, assignments, grades, and modules, all in one intuitive platform. This README.md provides an overview of the application's features, technologies used, and instructions for installation and usage.
 
+Backend repo - [Kanbas Backend](https://github.com/damyantjain/kanbas-node-server-app)
+
 ## Features
 
 - **Course Management**: Create, read, update, and delete courses effortlessly.
